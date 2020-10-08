@@ -1,6 +1,6 @@
 package:
   name: mcce
-  version: 1.0.0
+  version: "1.0.0"
 
 source:
   git_url: https://github.com/newbooks/Stable-MCCE.git
@@ -9,18 +9,18 @@ source:
 
 requirements:
   build:
-    - {{ compiler('gcc') }}
-#    - {{ compiler('g++') }}
-    - {{ compiler('gfortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
 
   run:
+    - python
     - numpy
     - scipy
     - matplotlib
-    - pygraphviz
     - pandas
     - xlrd
     - openpyxl
+    - requests
 
 about:
   home: https://gunnerlab.github.io/Stable-MCCE/
